@@ -5,10 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
+    <!-- daisyUI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
-    <h1>Hello World</h1>
+    <header>
+        <nav class="flex justify-around items-center">
+            <img class="w-16" src="./assets/Group.png" alt="">
+            <div>
+                <h1 class="text-3xl font-bold">$4500</h1>
+                <p class="border rounded p-1">Available Balance</p>
+            </div>
+            <button class="btn">Log Out</button>
+        </nav>
+        <section class="mt-10">
+            <h1 class="text-2xl font-bold">Welcome to Payoo!</h1>
+            <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+
+            <!-- cards -->
+            <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
+                <!-- card 1 -->
+                <div class="box border p-4 text-center rounded-sm">
+                    <img class="w-8 mx-auto" src="assets/wallet1.png" alt="Wallet">
+                    <h3>Add Money</h3>
+                </div>
+                <!-- card 2 -->
+                <div class="box border p-4 text-center rounded-sm">
+                    <img class="w-8 mx-auto" src="assets/wallet1.png" alt="Wallet">
+                    <h3>Add Money</h3>
+                </div>
+                <!-- card 3-->
+                <div class="box border p-4 text-center rounded-sm">
+                    <img class="w-8 mx-auto" src="assets/wallet1.png" alt="Wallet">
+                    <h3>Add Money</h3>
+                </div>
+                <!-- card 1 -->
+                <div class="box border p-4 text-center rounded-sm">
+                    <img class="w-8 mx-auto" src="assets/wallet1.png" alt="Wallet">
+                    <h3>Add Money</h3>
+                </div>
+                <!-- card 2 -->
+                <div class="box border p-4 text-center rounded-sm">
+                    <img class="w-8 mx-auto" src="assets/wallet1.png" alt="Wallet">
+                    <h3>Add Money</h3>
+                </div>
+                <!-- card 3-->
+                <div class="box border p-4 text-center rounded-sm">
+                    <img class="w-8 mx-auto" src="assets/wallet1.png" alt="Wallet">
+                    <h3>Add Money</h3>
+                </div>
+
+            </div>
+        </section>
+    </header>
 </body>
 
 </html>
