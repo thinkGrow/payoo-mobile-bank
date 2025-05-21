@@ -5,17 +5,18 @@ document
 
     const accountNumber = document.getElementById("account-number").value;
     const pinNumber = document.getElementById("pin-number").value;
+    const convertedPin = parseInt(pinNumber);
     console.log(accountNumber.length, pinNumber);
 
     if (accountNumber.length === 11) {
       console.log("yes - account");
-      if (pinNumber === "1234") {
-        console.log("yes - pin");
+      if (parseInt(pinNumber) === 1234) {
+        window.location.href = "./main.html";
       } else {
-        console.log("invalid pin");
+        alert("Invalid PIN");
       }
     } else {
-      console.log("Invalid Account Number");
+      alert("Invalid Account Number");
     }
 
     event.preventDefault();
