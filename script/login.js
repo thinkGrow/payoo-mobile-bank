@@ -8,7 +8,12 @@ document
     console.log(accountNumber.length, pinNumber);
 
     if (accountNumber.length === 11) {
-      console.log("yes");
+      console.log("yes - account");
+      if (pinNumber === "1234") {
+        console.log("yes - pin");
+      } else {
+        console.log("invalid pin");
+      }
     } else {
       console.log("Invalid Account Number");
     }
