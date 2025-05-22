@@ -7,7 +7,7 @@ document
     const amount = getInputValueByID("amount-number");
     const pin = getInputValueByID("pin-number");
     const account = document.getElementById("account-number").value;
-    let mainBalance = getInnerTextById("main-balance");
+    const mainBalance = getInnerTextById("main-balance");
 
     // console.log("Main balance", mainBalance);
 

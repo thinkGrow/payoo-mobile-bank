@@ -1,27 +1,28 @@
-document.getElementById("cashout-btn")
-    .addEventListener("click", function(event){
-        event.preventDefault();
+document
+  .getElementById("cashout-btn")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
 
-        const pin = document.getElementById("cashout-pin-number").value;
-        const convertedPin = parseInt(pin);
-        const amount = document.getElementById("cashout-amount-number").value;
-        
-        convertedAmount = parseFloat(amount);
+    // const amount = document.getElementById("cashout-amount-number").value;
+    const amount = getInputValueByID("cashout-amount-number");
+    // const pin = document.getElementById("cashout-pin-number").value;
+    const pin = getInputValueByID("cashout-pin-number");
+    const account = document.getElementById("account-number").value;
+    // const mainBalance = document.getElementById("main-balance").innerText;
+    const mainBalance = getInnerTextById("main-balance");
 
-        const mainBalance = document.getElementById("main-balance").
-            innerText;
+    convertedAmount = parseFloat(amount);
 
-        const convertedMainBalance = parseFloat(mainBalance);
+    const convertedMainBalance = parseFloat(mainBalance);
 
-        if(convertedPin===1234){
-            const sum = convertedMainBalance - convertedAmount;
-            document.getElementById("main-balance").innerText = sum;
-        }
-        else{
-            alert("Invalid Pin")
-        }
-
-
-
-
-    })
+    if (account.length === 11) {
+      if (pin === 1234) {
+        const sum = mainBalance - amount;
+        setInnerTextByIDandValue("main-balance", sum);
+      } else {
+        alert("Pin number not valid.");
+      }
+    } else {
+      alert("Account number not valid.");
+    }
+  });
