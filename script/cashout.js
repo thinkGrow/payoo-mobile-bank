@@ -15,6 +15,19 @@ document
 
     const convertedMainBalance = parseFloat(mainBalance);
 
+    if (!amount || amount < 0) {
+      alert("Invalid Amount");
+      return;
+    } else if (amount > mainBalance) {
+      alert("You do not sufficient balance");
+      return;
+    }
+
+    if (!pin) {
+      alert("Please enter a PIN.");
+      return;
+    }
+
     if (account.length === 11) {
       if (pin === 1234) {
         const sum = mainBalance - amount;

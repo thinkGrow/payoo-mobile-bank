@@ -13,7 +13,17 @@ document
 
     // console.log(amount, pin);
 
-    if (amount && pin) {
+    if (!amount || amount <= 0) {
+      alert("Invalid Amount");
+      return;
+    }
+
+    if (!pin) {
+      alert("Please enter a PIN.");
+      return;
+    }
+
+    if (account.length === 11) {
       if (pin === 1234) {
         const sum = mainBalance + amount;
         setInnerTextByIDandValue("main-balance", sum);
@@ -45,9 +55,9 @@ document
       `;
 
         container.appendChild(div);
-      }
+      } else alert("Invalid PIN");
     } else {
-      alert("Enter Amount");
+      alert("Invalid Account");
     }
 
     // return amount;
