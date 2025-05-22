@@ -27,12 +27,12 @@
             <!-- cards -->
             <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
                 <!-- card 1 -->
-                <div class="box cursor-pointer border p-4 text-center rounded-sm">
+                <div id="add-money-box" class="box cursor-pointer border p-4 text-center rounded-sm">
                     <img class="w-8 mx-auto" src="assets/wallet1.png" alt="Wallet">
                     <h3>Add Money</h3>
                 </div>
                 <!-- card 2 -->
-                <div class="box border p-4 text-center rounded-sm">
+                <div id="cashout-box" class="box cursor-pointer border p-4 text-center rounded-sm">
                     <img class="w-8 mx-auto" src="assets/purse1.png" alt="Wallet">
                     <h3>Cash Out</h3>
                 </div>
@@ -60,8 +60,7 @@
             </div>
 
             <!-- section add money -->
-
-            <section>
+            <section id="addmoney">
                 <h2>Add Money</h2>
 
                 <div class="">
@@ -111,10 +110,61 @@
                     </div>
                 </div>
             </section>
+
+            <!-- section cash out -->
+            <section id="cashout">
+                <h2>Cash Out</h2>
+
+                <div class="">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                        <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                            <div class="card-body">
+                                <form action="">
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Account Number</span>
+                                        </label>
+                                        <input id="account-number" type="number" placeholder="Your Account Number"
+                                            value="01741515595" class="input input-bordered" required />
+                                    </div>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Amount Number</span>
+                                        </label>
+                                        <input id="cashout-amount-number" value="100" type="text"
+                                            placeholder="Your Amount Number" class="input input-bordered" required />
+                                    </div>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Pin</span>
+                                        </label>
+                                        <input id="cashout-pin-number" type="text" value="1234" placeholder="Your Pin"
+                                            class="input input-bordered" autocomplete="off" required />
+                                        <label class="label">
+                                            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                                        </label>
+                                    </div>
+                                    <div id="cashout-btn" class="form-control mt-6">
+                                        <button class="btn border-none bg-blue-700 mt-4">Cash Out</button>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
         </section>
     </header>
 
-    <script src="script/addMoney.js"></script>
+    <script src="./script/addMoney.js"></script>
+    <script src="./script/toggle.js"></script>
+    <script src="./script/cashout.js"></script>
 </body>
 
 </html>
