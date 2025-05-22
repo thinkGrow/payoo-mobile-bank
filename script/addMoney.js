@@ -2,24 +2,25 @@ document
   .getElementById("add-money")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    const amount = document.getElementById("amount-number").value;
-    const convertedAmount = parseFloat(amount);
-    // console.log("amount", amount);
-    // console.log("converted amount", convertedAmount);
-    const pin = document.getElementById("pin-number").value;
-    convertedPin = parseInt(pin);
-    // console.log(convertedPin);
+    // console.log("hello");
+    // getInputValueByID();
+    const amount = getInputValueByID("amount-number");
+    const pin = getInputValueByID("pin-number");
+    const account = document.getElementById("account-number").value;
+    let mainBalance = getInnerTextById("main-balance");
 
-    const mainBalance = document.getElementById("main-balance").innerText;
-    const convertedMainBalance = parseInt(mainBalance);
-    // console.log("main balaance", convertedMainBalance);
+    // console.log("Main balance", mainBalance);
+
+    // console.log(amount, pin);
 
     if (amount && pin) {
-      if (convertedPin === 1234) {
-        const sum = convertedMainBalance + convertedAmount;
-        document.getElementById("main-balance").innerText = sum;
+      if (pin === 1234) {
+        const sum = mainBalance + amount;
+        setInnerTextByIDandValue("main-balance", sum);
       }
     } else {
       alert("Enter Amount");
     }
+
+    // return amount;
   });
