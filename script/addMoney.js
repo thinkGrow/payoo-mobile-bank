@@ -18,14 +18,33 @@ document
         const sum = mainBalance + amount;
         setInnerTextByIDandValue("main-balance", sum);
 
-        const container = document.getElementById("transaction-container");
-        const p = document.createElement("p");
-        p.innerText = `
-          added ${amount} from ${account}
-        `;
+        // const selectedBank = getInputValueByID("bank-select");
+        const selectedBank = document.getElementById("bank-select").value;
+        // console.log(selectedBank);
 
-        console.log(p);
-        container.appendChild(p);
+        const container = document.getElementById("transaction-container");
+
+        // Method 1
+        //   const p = document.createElement("p");
+        //   p.innerText = `
+        //     added ${amount} from ${account} from ${selectedBank} Bank
+        //   `;
+
+        //   console.log(p);
+        //   container.appendChild(p);
+        // }
+
+        // Method 2
+        const div = document.createElement("div");
+        div.classList.add("bg-red-400");
+        div.innerHTML = `
+      <h1 class="text-yellow-300"> Added money from ${selectedBank} </h1>
+      <h3>Amount: ${amount} </h3>
+      <p>Account number: ${account} </p>
+      <br>
+      `;
+
+        container.appendChild(div);
       }
     } else {
       alert("Enter Amount");
