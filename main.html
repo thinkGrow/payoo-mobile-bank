@@ -15,7 +15,7 @@
         <nav class="flex justify-around items-center">
             <img class="w-16" src="./assets/Group.png" alt="">
             <div>
-                <h1 class="text-3xl font-bold">$4500</h1>
+                <h1 class="text-3xl font-bold">$ <span id="main-balance">4500</span></h1>
                 <p class="border rounded p-1">Available Balance</p>
             </div>
             <button class="btn">Log Out</button>
@@ -68,33 +68,43 @@
                     <div class="hero-content flex-col lg:flex-row-reverse">
                         <div class="card w-full max-w-sm shrink-0 shadow-2xl">
                             <div class="card-body">
-                                <legend>Select Bank</legend>
-                                <select class="select">
-                                    <option disabled selected>Pick a color</option>
-                                    <option value="Bkash">Bkash</option>
-                                    <option value="Nagad">Nagad</option>
-                                    <option value="DBBL">DBBL</option>
-                                </select>
-                                <div class="form-control">
-                                    <label class="label">
-                                        <span class="label-text">Account Number</span>
-                                    </label>
-                                    <input id="account-number" type="number" placeholder="Your Account Number"
-                                        value="01741515595" class="input input-bordered" required />
-                                </div>
-                                <div class="form-control">
-                                    <label class="label">
-                                        <span class="label-text">Pin</span>
-                                    </label>
-                                    <input id="pin-number" type="text" value="1234" placeholder="Your Pin"
-                                        class="input input-bordered" autocomplete="off" required />
-                                    <label class="label">
-                                        <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
-                                    </label>
-                                </div>
-                                <div class="form-control mt-6">
-                                    <button class="btn border-none bg-blue-700 mt-4">Add Money</button>
-                                </div>
+                                <form action="">
+                                    <legend>Select Bank</legend>
+                                    <select class="select">
+                                        <option disabled selected>Pick a color</option>
+                                        <option value="Bkash">Bkash</option>
+                                        <option value="Nagad">Nagad</option>
+                                        <option value="DBBL">DBBL</option>
+                                    </select>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Account Number</span>
+                                        </label>
+                                        <input id="account-number" type="number" placeholder="Your Account Number"
+                                            value="01741515595" class="input input-bordered" required />
+                                    </div>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Amount Number</span>
+                                        </label>
+                                        <input id="amount-number" value="100" type="text"
+                                            placeholder="Your Amount Number" class="input input-bordered" required />
+                                    </div>
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Pin</span>
+                                        </label>
+                                        <input id="pin-number" type="text" value="1234" placeholder="Your Pin"
+                                            class="input input-bordered" autocomplete="off" required />
+                                        <label class="label">
+                                            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                                        </label>
+                                    </div>
+                                    <div id="add-money" class="form-control mt-6">
+                                        <button class="btn border-none bg-blue-700 mt-4">Add Money</button>
+                                    </div>
+
+                                </form>
 
                             </div>
                         </div>
@@ -103,6 +113,8 @@
             </section>
         </section>
     </header>
+
+    <script src="script/addMoney.js"></script>
 </body>
 
 </html>
